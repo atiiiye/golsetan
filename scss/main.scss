@@ -1,0 +1,23 @@
+@import "fonts";
+
+body{
+    direction: rtl;
+}
+
+header{
+   
+    .navbar{
+         // background-color: red !important;
+        &-brand{
+            &-img{
+                width:126;
+                height:98;
+            }
+        }
+        &-nav{
+            font-family: "Nastaliq";
+            font-size: 100%;
+            color: #ea8b77;
+        }
+    }
+}
