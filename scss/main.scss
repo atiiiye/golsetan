@@ -1,23 +1,43 @@
 @import "fonts";
+@import "base";
 
-body{
+body {
     direction: rtl;
+    background-image: url(./../img/);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header{
-   
-    .navbar{
-         // background-color: red !important;
-        &-brand{
-            &-img{
-                width:126;
-                height:98;
+header {
+    // z-index: 10;
+
+    .navbar {
+        background-color: $color-navbar;
+        &-brand {
+            &-img {
+                width: auto;
+                height: 60px;
+                padding: 5px;
             }
         }
-        &-nav{
-            font-family: "Nastaliq";
+
+        .nav-link {
+            font-family: "Samim";
             font-size: 100%;
-            color: #ea8b77;
+            color: $color-pink;
+        }
+
+        .navbar-collapse{
+            .nav-item{
+                .nav-link{
+                    font-weight: bold;
+                    .fa-angle-down{
+                        font-weight: bold;
+                     }
+                }
+               
+            }
+
         }
     }
 }

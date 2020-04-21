@@ -34,16 +34,32 @@
 
 body {
   direction: rtl;
+  background-image: url(./../img/);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .navbar {
+  background-color: rgba(255, 255, 255, 0.68);
 }
 
 header .navbar-brand-img {
-  width: 126;
-  height: 98;
+  width: auto;
+  height: 60px;
+  padding: 5px;
 }
 
-header .navbar-nav {
-  font-family: "Nastaliq";
+header .navbar .nav-link {
+  font-family: "Samim";
   font-size: 100%;
   color: #ea8b77;
+}
+
+header .navbar .navbar-collapse .nav-item .nav-link {
+  font-weight: bold;
+}
+
+header .navbar .navbar-collapse .nav-item .nav-link .fa-angle-down {
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
