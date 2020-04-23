@@ -5,9 +5,9 @@ body {
     direction: rtl;
     text-align: right;
     font-family: "Samim";
-    background-image: url(./../img/);
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url(./../img/);
+    // background-repeat: no-repeat;
+    // background-size: cover;
 }
 
 header {
@@ -17,57 +17,147 @@ header {
     .navbar {
         background-color: $color-navbar;
         box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
 
-        &-brand {
-            &-img {
-                width: auto;
-                height: 60px;
-                padding: 5px;
-                margin-left: 5px;
-            }
-        }
 
-        .navbar-collapse {
-            position: relative;
-            bottom: -5px;
+        &-right {
+            display: flex;
 
-            .navbar-nav {
-                align-items: flex-end;
-            }
-        }
+            .hamburger-menu {
+                display: inline-block;
+                margin-top: 6px;
+                position: absolute;
+                left: 1rem;
 
-        .nav-link {
-            font-size: 100%;
-            color: $color-pink;
-            padding: 0 15px;
-            margin-bottom: 1.1rem;
-            .delivery-icon{
-                width: 41px;
-            }
-        }
+                .navbar-toggler-icon {
+                    width: 1.8em;
+                    height: 1.8em;
+                }
 
-        .dropdown-menu {
-          
-            margin-top: 1.1rem;
+                .menu {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    cursor: pointer;
+                    border: 1px solid rgba(234, 139, 119, .2);
+                    padding: 5px;
+                    border-radius: 4px;
 
-            .dropdown-item {
-                text-align: center;
-                color: $color-green;
-            }
-        }
 
-        .navbar-collapse {
-            .nav-item {
-                .nav-link {
-                    font-weight: bold;
+                    &-line {
+                        width: 100%;
+                        height: 2px;
+                        background-color: rgba(234, 139, 119, .7);
+                        border-radius: 2px;
 
-                    .fa-angle-down {
-                        font-weight: bold;
                     }
+                }
+            }
+
+
+            .navbar-brand {
+                padding-top: 0;
+                padding-bottom: 0;
+
+                .navbar-brand-img {
+                    width: auto;
+                    height: 60px;
+                    padding: 5px;
+                    margin-left: 5px;
+                }
+            }
+
+            .nav-link {
+                font-size: 100%;
+                color: $color-pink;
+                padding: 0 15px;
+
+                .fa-angle-down {
+                    padding-right: 3px;
+                }
+
+                .delivery-icon {
+                    width: 41px;
+                }
+            }
+
+            .dropdown-menu {
+
+                margin-top: 1.1rem;
+
+                .dropdown-item {
+                    text-align: center;
+                    color: $color-green;
+                }
+            }
+
+            .navbar-collapse {
+                .nav-item {
+                    .nav-link {
+                        font-size: 100%;
+                        font-weight: bold;
+
+                        .fa-angle-down {
+                            font-weight: bold;
+                        }
+                    }
+
                 }
 
             }
-
         }
+
+        &-left {
+
+            .navbar-nav {
+                display: flex;
+                align-items: center;
+
+                .nav-item {
+
+                    .nav-link {
+                        font-size: 100%;
+                        color: $color-green;
+                        font-weight: bold;
+
+
+                        .fa-shopping-cart {
+                            font-size: 24px;
+                        }
+
+                        .material-icons {}
+
+                    }
+                }
+            }
+
+            @media (max-width:768px) {
+                .navbar-nav {
+                    font-size: 90%;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    position: relative;
+                    left: 25vw;
+                   
+                }
+                .nav-link{
+                    margin-left: 5px;
+                }
+            }
+
+            @media (max-width:576px) {
+                .material-icons{
+                    display: none;
+                }
+
+                .nav-link-login{
+            
+                }
+            }
+        }
+
+
     }
 }
