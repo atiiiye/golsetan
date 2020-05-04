@@ -1,14 +1,13 @@
+ // start form validations
 
-// start form validations
-
-(function() {
+ (function () {
   'use strict';
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
+    var validation = Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
@@ -18,40 +17,51 @@
     });
   }, false);
 })();
-
 // end form validations
 
+$(document).ready(function () {
+ 
+  let navbar = document.querySelector('.navbar');
+  let navItem = navbar.querySelector('.nav-item');
+  let nanBarTogglerIcon = navbar.querySelector('.navbar-toggler-icon');
+  let navLinkLogin = navbar.querySelector('.nav-link-login')
+  let materialIcons = navbar.querySelector('.material-icons')
+
+  let navItemDropdowns = document.querySelectorAll('li.nav-item.dropdown')
+  let dropdownItems = document.querySelectorAll('a.dropdown-item')
+  let navbarCollapse = document.querySelector('div.navbar-collapse')
 
 
 
+  nanBarTogglerIcon.addEventListener('click', function (e) {
+    nanBarTogglerIcon.classList.toggle("change");
 
-let navbar = document.querySelector('.navbar');
-let navItem=navbar.querySelector('.nav-item');
-let navLink = navbar.querySelector('.nav-link');
-let nanBarTogglerIcon = navbar.querySelector('.navbar-toggler-icon');
-let navLinkLogin = navbar.querySelector('.nav-link-login')
-let materialIcons =navbar.querySelector('.material-icons')
-let iconDown = document.querySelector('.fa-angle-down').classList;
-let iconUp = document.querySelector('.fa-angle-up').classList;
-console.log(iconUp);
-console.log(iconDown)
+    navLinkLogin.classList.toggle("display-none")
+    materialIcons.classList.toggle("display-none")
+
+  })
 
 
+  navItemDropdowns.forEach(navItem => navItem.addEventListener('mouseover', function () {
+    navItem.classList.add('show')
+    let dropdownMenus = navItem.querySelector('div.dropdown-menu');
+    // dropdownMenus.forEach(dropdownMenu=>dropdownMenu.classList.add('show'))
+    dropdownMenus.classList.add('show')
+  }))
 
-nanBarTogglerIcon.addEventListener('click', function (e) {
-   nanBarTogglerIcon.classList.toggle("change");
 
-   navLinkLogin.classList.toggle("display-none")
-   materialIcons.classList.toggle("display-none")
+  navItemDropdowns.forEach(navItem => navItem.addEventListener('mouseleave', function () {
+    navItem.classList.remove('show')
+    let dropdownMenus = navItem.querySelector('div.dropdown-menu');
+    // dropdownMenus.forEach(dropdownMenu=>dropdownMenu.classList.remove('show'))
+    dropdownMenus.classList.remove('show')
+  }))
+
+
+  dropdownItems.forEach(dropdownItem => dropdownItem.addEventListener('click', function () {
+    navbarCollapse.classList.toggle('show');
+    nanBarTogglerIcon.classList.toggle("change");
+    console.log('hello')
+  }))
 
 })
-
-
-navLink.addEventListener('click', function(){
-  // iconDown.toggle('d-none');
-  // iconUp.toggle('d-flex');
-})
-
-// $(function(){
-//     $('li').css('color','red');
-// })
