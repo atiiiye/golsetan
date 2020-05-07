@@ -40,6 +40,7 @@ body {
   direction: rtl;
   text-align: right;
   font-family: "Samim";
+  position: relative;
 }
 
 main div.container-fluid {
@@ -48,6 +49,7 @@ main div.container-fluid {
   background-image: url("./../img/spring-flowers-plant-sale2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main div.container-fluid header.container-fluid {
@@ -62,11 +64,14 @@ main div.container-fluid header.container-fluid nav.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -80,6 +85,7 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right {
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.hamburger-menu {
   display: inline-block;
   margin-top: 6px;
+  padding-left: 2.2rem;
   position: absolute;
   left: .5rem;
 }
@@ -151,7 +157,15 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right a.na
   width: auto;
   height: 60px;
   padding: 5px 0;
-  margin-left: 5px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  main div.container-fluid header.container-fluid nav.navbar div.navbar-right a.navbar-brand img.navbar-brand-img {
+    padding: 3px 0;
+    margin-left: 3px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -347,6 +361,15 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
   color: #1c7256;
   font-weight: bold;
   padding: 0 .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav li.nav-item a.nav-link:focus {
@@ -366,6 +389,9 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav li.nav-item i.material-icons {
   font-size: 23px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  padding: 0;
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav li.nav-item .display-none {
@@ -375,6 +401,7 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
 @media (max-width: 767px) {
   main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav {
     font-size: 90%;
+    width: 55vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -382,8 +409,9 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    position: relative;
-    left: 170%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   main div.container-fluid header.container-fluid nav.navbar div.navbar-left a.nav-link {
     margin-left: 5px;
@@ -393,18 +421,9 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
   }
 }
 
-@media (max-width: 700px) {
-  main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav {
-    position: relative;
-    left: 140%;
-  }
-}
-
 @media (max-width: 575px) {
   main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav {
     font-size: 90%;
-    position: relative;
-    left: 120%;
   }
   main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav a.nav-link.nav-link-login {
     padding-left: 0;
@@ -415,11 +434,10 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
   }
 }
 
-@media (max-width: 450px) {
-  main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav {
-    font-size: 80%;
-    position: relative;
-    left: 60%;
+@media (max-width: 767px) {
+  main div.container-fluid header.container-fluid nav.navbar {
+    background-color: rgba(255, 255, 255, 0.68);
+    padding-right: 0;
   }
 }
 
@@ -464,34 +482,98 @@ main div.container-fluid div.side-title {
           align-items: center;
   text-align: center;
   margin-top: 5px;
-  position: absolute;
-  top: 25%;
+  height: 400px;
 }
 
-main div.container-fluid div.side-title p.h3 {
+main div.container-fluid div.side-title div.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+
+main div.container-fluid div.side-title div.row p.h3 {
   font-weight: bold;
   line-height: 1.5em;
   color: #fff;
   text-shadow: 0 2px rgba(53, 53, 53, 0.6);
-  margin: 1rem;
+  margin: .7rem;
 }
 
-main div.container-fluid div.side-title a.button {
+main div.container-fluid div.side-title div.row a.button {
   background-color: #fe6666;
   text-decoration: none;
   border-radius: 7px;
   border: none;
   color: #f1f1f1;
   padding: .8rem .9rem;
-  margin-top: 1.3rem;
+  margin-top: 1rem;
   outline: 0;
   font-size: 90%;
   font-weight: bold;
   cursor: pointer;
 }
 
-main div.container-fluid div.side-title a.button:hover {
-  -webkit-box-shadow: 0 0 3px 3px rgba(241, 241, 241, 0.5);
-          box-shadow: 0 0 3px 3px rgba(241, 241, 241, 0.5);
+main div.container-fluid div.side-title div.row a.button:hover {
+  -webkit-box-shadow: 0 1px 3px 3px rgba(241, 241, 241, 0.5);
+          box-shadow: 0 1px 3px 3px rgba(241, 241, 241, 0.5);
+}
+
+section.circle-elements div.row div.circle-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.circle-elements div.row div.circle-item:hover {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  cursor: pointer;
+}
+
+section.circle-elements div.row div.circle-item img.rounded-circle {
+  width: 85%;
+  -webkit-box-shadow: 0 0 3px 3px #faf6fb;
+          box-shadow: 0 0 3px 3px #faf6fb;
+}
+
+section.circle-elements div.row div.circle-item img.rounded-circle:hover {
+  -webkit-box-shadow: 0 0 9px 3px rgba(149, 144, 148, 0.5);
+          box-shadow: 0 0 9px 3px rgba(149, 144, 148, 0.5);
+}
+
+@media (max-width: 991px) {
+  section.circle-elements div.row div.circle-item img.rounded-circle {
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  section.circle-elements div.row div.circle-item img.rounded-circle {
+    width: 70%;
+  }
+}
+
+section.circle-elements div.row div.circle-item p {
+  margin-top: .5rem;
+  font-weight: bold;
+  color: #ea8b77;
 }
 /*# sourceMappingURL=main.css.map */

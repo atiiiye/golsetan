@@ -1,12 +1,22 @@
 $color-green :rgb(28, 114, 86);
+$color-green2:#94d3ac;
+$color-green3:#0c9463;
 $color-pink :rgb(234, 139, 119);
 $color-pink2:#fe6666;
-$color-pink3:rgb(220,53,69);
+$color-pink3:rgb(220, 53, 69);
 $color-navbar:rgba(255, 255, 255, .68);
 $color-light: #f1f1f1;
+$color-light-2:#faf6fb;
+$color-text:#959094;
 $color-5:#ff4d4d;
 $color-6:#ff3838;
+$color-red:#EA2027;
 
-$lineWidth: .5rem;
-$lineLength: 25px;
-$baseMargin: 8px;
+
+
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: "Samim";
+    position: relative;
+}

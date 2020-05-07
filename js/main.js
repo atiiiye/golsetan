@@ -21,11 +21,12 @@
 
 $(document).ready(function () {
  
-  let navbar = document.querySelector('.navbar');
+  let navbar = document.querySelector('nav.navbar');
   let navItem = navbar.querySelector('.nav-item');
-  let nanBarTogglerIcon = navbar.querySelector('.navbar-toggler-icon');
+  let navBarTogglerIcon = navbar.querySelector('.navbar-toggler-icon');
   let navLinkLogin = navbar.querySelector('.nav-link-login')
   let materialIcons = navbar.querySelector('.material-icons')
+
 
   let navItemDropdowns = document.querySelectorAll('li.nav-item.dropdown')
   let dropdownItems = document.querySelectorAll('a.dropdown-item')
@@ -33,13 +34,19 @@ $(document).ready(function () {
 
 
 
-  nanBarTogglerIcon.addEventListener('click', function (e) {
-    nanBarTogglerIcon.classList.toggle("change");
+  navBarTogglerIcon.addEventListener('click', function (e) {
+    navBarTogglerIcon.classList.toggle("change");
+    if(!navbarCollapse.classList.contains('show')){
+      navbar.style.backgroundColor='#fff';
+    }else{
+      navbar.style.backgroundColor='rgba(255, 255, 255, 0.68)';
+    }
 
     navLinkLogin.classList.toggle("display-none")
     materialIcons.classList.toggle("display-none")
 
   })
+
 
 
   navItemDropdowns.forEach(navItem => navItem.addEventListener('mouseover', function () {

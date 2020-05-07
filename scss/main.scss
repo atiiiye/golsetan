@@ -1,51 +1,45 @@
 @import "fonts";
 @import "base";
 
-body {
-    direction: rtl;
-    text-align: right;
-    font-family: "Samim";
-
-}
-
-
-
-
 
 main {
+    
     div.container-fluid {
         width: 100%;
         height: 500px;
         background-image: url('./../img/spring-flowers-plant-sale2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-
+        background-attachment: fixed;
         header.container-fluid {
             z-index: 10;
             // max-width: 1248px;
             background-color: rgba(53, 53, 53, 0.1);
-
+            // background-image: url('./../img/spring-flowers-plant-sale2.jpg');
+        
             nav.navbar {
                 background-color: $color-navbar;
                 box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
-                // padding-left: .5rem;
-                // padding-right: .5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
                 padding-bottom: 0;
                 padding-top: 0;
-
-
+        
+        
+        
                 div.navbar-right {
                     display: flex;
-
+        
                     div.hamburger-menu {
                         display: inline-block;
                         margin-top: 6px;
+                        padding-left: 2.2rem;
                         position: absolute;
                         left: .5rem;
-
+        
                         span.menu.navbar-toggler-icon {
                             width: 1.8em;
                             height: 1.8em;
@@ -57,7 +51,7 @@ main {
                             transition: transform .3s;
                             // height: $baseMargin*2 + $lineWidth;
                             // overflow-y: auto;
-
+        
                             div.menu-line {
                                 width: 100%;
                                 height: 4px;
@@ -65,10 +59,11 @@ main {
                                 border-radius: 2px;
                                 transition: all .3s .3s;
                                 transform-origin: left;
-
+        
                             }
                         }
-
+        
+        
                         @media(max-width:575px) {
                             span.menu.navbar-toggler-icon {
                                 position: relative;
@@ -76,44 +71,51 @@ main {
                                 left: -1rem;
                             }
                         }
-
+        
                         .change .menu-line-1 {
                             -webkit-transform: rotate(45deg);
                             transform: rotate(45deg);
                             width: 100%;
                             height: 4px;
-
+        
                         }
-
+        
                         .change .menu-line-2 {
                             opacity: 0;
                         }
-
+        
                         .change .menu-line-3 {
                             -webkit-transform: rotate(-45deg);
                             transform: rotate(-45deg);
                             width: 100%;
                             height: 4px;
                         }
-
-
+        
+        
                     }
-
-
+        
+        
                     a.navbar-brand {
                         padding-top: 0;
                         padding-bottom: 0;
                         outline: 0;
-
+        
                         img.navbar-brand-img {
                             width: auto;
                             height: 60px;
                             padding: 5px 0;
-                            margin-left: 5px;
-                            // margin-right: 20px;
-
+                            margin-left: 30px;
+                            margin-right: 20px;
+        
                         }
-
+                        
+                        @media(max-width: 767px) {
+                            img.navbar-brand-img {
+                                padding: 3px 0;
+                                margin-left: 3px;
+                            }
+                        }
+        
                         @media(max-width: 575px) {
                             img.navbar-brand-img {
                                 width: 50px;
@@ -123,7 +125,7 @@ main {
                             }
                         }
                     }
-
+        
                     div.dropdown-menu {
                         margin-top: 1.1rem;
                         width: 12rem;
@@ -135,18 +137,18 @@ main {
                         padding-bottom: 0;
                         padding-top: 0;
                         // background-color: rgba($color: $color-light, $alpha: 1);
-
+        
                         a.dropdown-item {
                             text-align: right;
                             color: $color-green;
                             outline: 0;
-
+        
                             &:hover {
                                 background-color: $color-light
                             }
                         }
                     }
-
+        
                     @media(max-width:991px) {
                         div.dropdown-menu {
                             position: absolute;
@@ -154,80 +156,80 @@ main {
                             top: 2.5rem;
                         }
                     }
-
+        
                     @media(max-width:767px) {
                         div.dropdown-menu#flowers {
                             position: static;
                             float: none;
                             // right: 4.8rem;
                         }
-
+        
                         div.dropdown-menu#suitability {
                             position: static;
                             float: none;
                             // right: 6.5rem;
                         }
-
+        
                         div.dropdown-menu#plants {
                             position: static;
                             float: none;
                             // right: 4.9rem;
                         }
                     }
-
+        
                     div.navbar-collapse {
                         // padding-top: 1rem;
-
+        
                     }
-
+        
                     @media (max-width:991px) {
                         div.navbar-collapse.collapse.show {
                             transform: translate(10%, 0);
                             transition: transform .5s linear;
                         }
                     }
-
+        
                     li.nav-item {
                         padding: 1rem 0;
-
+        
                         a.nav-link {
                             font-size: 100%;
                             font-weight: bold;
                             color: $color-pink;
                             padding: 0 15px;
-
+        
                             &:hover {
                                 text-shadow: 0 .09rem rgba(0, 0, 0, .2);
                                 box-shadow: 0 0 0 0 rgba($color: #fff, $alpha: .1);
                             }
-
+        
                             &:focus {
                                 outline: 0;
                                 text-shadow: 0 .09rem rgba(0, 0, 0, .3)
                             }
-
+        
                             i.fa-angle-down {
                                 font-weight: bold;
                                 padding-right: 3px;
                                 transform: rotate(0deg);
                             }
-
+        
                             .fa {
                                 transition: .3s transform ease-in-out;
                             }
-
+        
                             @media(max-width:767px) {
                                 i.fa-angle-down {
                                     font-weight: bold;
                                     padding-right: 3px;
                                     transform: rotate(0deg);
                                 }
-
+        
                                 .fa {
                                     transition: .3s transform ease-in-out;
                                 }
                             }
-
+        
                             img.delivery-icon {
                                 width: 41px;
                                 margin-bottom: 4px;
@@ -243,187 +245,198 @@ main {
                                 animation-direction: normal;
                                 animation-fill-mode: none;
                                 animation-play-state: running;
-
+        
                             }
-
+        
                             @keyframes MoveUpDown {
                                 from {
                                     bottom: 0px;
                                 }
-
+        
                                 to {
                                     bottom: 3px;
                                 }
                             }
                         }
-
+        
                     }
-
+        
                     li.nav-item.dropdown.show {
                         a.nav-link {
                             i.fa-angle-down {
                                 transform: rotate(180deg);
                             }
-
+        
                             .fa {
                                 transition: .3s transform ease-in-out;
                             }
-
+        
                             @media(max-width:767px) {
                                 i.fa-angle-down {
                                     font-weight: bold;
                                     padding-right: 3px;
                                     transform: rotate(180deg);
                                 }
-
+        
                                 .fa {
                                     transition: .3s transform ease-in-out;
                                 }
                             }
                         }
-
+        
                         div.dropdown-menu {
                             a.dropdown-item {}
                         }
                     }
-
+        
                 }
-
+        
                 div.navbar-left {
                     ul.navbar-nav {
                         display: flex;
                         align-items: center;
-
+        
                         li.nav-item {
                             a.nav-link {
                                 font-size: 100%;
                                 color: $color-green;
                                 font-weight: bold;
                                 padding: 0 .8rem;
-
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+        
                                 &:focus {
                                     outline: 0;
                                     box-shadow: 0 0 0 0 rgba($color: #fff, $alpha: .1);
                                     text-shadow: 0 .09rem rgba(0, 0, 0, .3)
                                 }
-
+        
                                 &:hover {
                                     text-shadow: 0 .09rem rgba(0, 0, 0, .2);
                                 }
-
+        
                                 i.fa-shopping-cart {
                                     font-size: 24px;
                                 }
                             }
-
+        
                             i.material-icons {
                                 font-size: 23px;
+                                transform: rotate(270deg);
+                                padding: 0;
                             }
-
+        
                             .display-none {
                                 display: none;
                             }
                         }
+        
                     }
-
+        
                     @media (max-width:767px) {
                         ul.navbar-nav {
                             font-size: 90%;
+                            width: 55vw;
                             display: flex;
                             flex-direction: row-reverse;
-                            position: relative;
-                            left: 170%;
+                            justify-content: flex-end;
+                           
+                         
+                            // margin-left: auto;
                         }
-
+        
                         a.nav-link {
                             margin-left: 5px;
                         }
-
+        
                         a.nav-link.nav-link-login {
                             padding-left: 0;
                         }
-
+        
                     }
-
-                    @media (max-width:700px) {
-                        ul.navbar-nav {
-                            position: relative;
-                            left: 140%;
-                        }
-                    }
-
+        
+                    // @media (max-width:700px) {
+                    //     ul.navbar-nav {
+                    //         position: relative;
+                    //         left: 140%;
+                    //     }
+                    // }
+        
                     @media (max-width:575px) {
-
+        
                         ul.navbar-nav {
                             font-size: 90%;
-                            position: relative;
-                            left: 120%;
-
+                            // position: relative;
+                            // left: 120%;
+        
                             a.nav-link.nav-link-login {
                                 padding-left: 0;
                                 font-size: 90% !important;
                             }
-
+        
                             i.material-icons {
                                 font-size: 19px !important;
-
+        
                             }
                         }
-
-
+        
+        
                     }
-
-                    @media (max-width:450px) {
-                        ul.navbar-nav {
-                            font-size: 80%;
-                            position: relative;
-                            left: 60%;
-                        }
-                    }
-
-
-
+        
+                    // @media (max-width:450px) {
+                    //     ul.navbar-nav {
+                    //         font-size: 80%;
+                    //         position: relative;
+                    //         left: 60%;
+                    //     }
+                    // }
+        
+        
+        
                 }
-
-
+        
+        
             }
-
+        
+            @media(max-width:767px) {
+                nav.navbar {
+                    background-color: rgba(255, 255, 255, 0.68);
+                    padding-right: 0;
+                }
+            }
+        
             .form-register {
                 display: flex;
                 justify-content: center;
-
+        
                 form.needs-validation {
                     .form-group {
                         padding: 0;
-
+        
                         .btn-signin {
                             background-color: #1C7256;
                             color: #fff;
-
+        
                         }
                     }
-
+        
                 }
-
+        
                 .modal-body {
                     padding: 0;
-
+        
                     .was-validated .form-check-input:valid~ {
                         .form-check-label {
                             color: #000;
                         }
                     }
                 }
-
+        
             }
         }
-        @media(max-width:767px){
-            header.container-fluid{
-                // background-color: #fff;
-            }
-        }
+        
 
-        // div.main-backgroud {
 
         div.side-title {
             display: flex;
@@ -432,18 +445,24 @@ main {
             align-items: center;
             text-align: center;
             margin-top: 5px;
-            position: absolute;
-            top: 25%;
+            height: 400px;
+
+           div.row{
+               display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: end;
 
             p.h3 {
                 font-weight: bold;
                 line-height: 1.5em;
                 color: #fff;
                 text-shadow: 0 2px rgba(53, 53, 53, 0.6);
-                margin: 1rem;
-                // padding-right: 2rem;
-           
+                margin: .7rem;
+
+
             }
+
 
             a.button {
                 background-color: $color-pink2;
@@ -452,19 +471,59 @@ main {
                 border: none;
                 color: $color-light;
                 padding: .8rem .9rem;
-                margin-top: 1.3rem;
+                margin-top: 1rem;
                 outline: 0;
                 font-size: 90%;
                 font-weight: bold;
                 cursor: pointer;
-                &:hover{
-                    box-shadow: 0 0 3px 3px rgba($color: $color-light, $alpha: .5);
-                }
-               
-            }
-        }
 
-        // }
+                &:hover {
+                    box-shadow: 0 1px 3px 3px rgba($color: $color-light, $alpha: .5);
+                }
+
+            }
+           }
+        }
     }
 
+}
+
+section.circle-elements {
+
+
+        div.row {
+            div.circle-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &:hover{
+                    transition: all .3s ease;
+                    transform: translateY(-4px);
+                    cursor: pointer;
+                }
+                img.rounded-circle {
+                    width: 85%;
+                    box-shadow: 0 0 3px 3px $color-light-2;
+                    &:hover{
+                        box-shadow: 0 0 9px 3px rgba($color: $color-text, $alpha: .5);
+                    }
+                }
+                @media (max-width:991px) {
+                    img.rounded-circle {
+                        width: 75%;
+                    }
+                }
+                @media (max-width:767px) {
+                    img.rounded-circle {
+                        width: 70%;
+                    }
+                }
+                p {
+                    margin-top: .5rem;
+                    font-weight: bold;
+                    color: $color-pink;
+                   
+                }
+            }
+        }
 }
