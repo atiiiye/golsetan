@@ -10,7 +10,8 @@ $color-light-2:#faf6fb;
 $color-text:#959094;
 $color-5:#ff4d4d;
 $color-6:#ff3838;
-$color-red:#EA2027;
+$color-:#fffbbe;
+
 
 
 
@@ -19,4 +20,19 @@ body {
     text-align: right;
     font-family: "Samim";
     position: relative;
+}
+
+@mixin products (){
+        background-color:$color-light-2;
+        width: 100%;
+        height: 100vh;
+        padding: 3rem 0;
+    
+} 
+h4{
+    font-weight: bold !important;
+    color: $color-green;
+    padding:0 2rem 1rem;
+    text-align: center;
+    
 }

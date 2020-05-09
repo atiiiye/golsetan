@@ -43,6 +43,13 @@ body {
   position: relative;
 }
 
+h4 {
+  font-weight: bold !important;
+  color: #1c7256;
+  padding: 0 2rem 1rem;
+  text-align: center;
+}
+
 main div.container-fluid {
   width: 100%;
   height: 500px;
@@ -575,5 +582,61 @@ section.circle-elements div.row div.circle-item p {
   margin-top: .5rem;
   font-weight: bold;
   color: #ea8b77;
+}
+
+section.offer-section {
+  background-color: #faf6fb;
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 0;
+}
+
+section.offer-section div.row {
+  margin: auto 0;
+}
+
+section.offer-section div.row div.product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+section.offer-section div.row div.product-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+section.offer-section div.row div.product-item img {
+  width: 95%;
+  height: auto;
+  border-radius: 14px;
+}
+
+section.offer-section div.row div.product-item img:hover {
+  -webkit-box-shadow: 2px 2px 3px 0 #f1f1f1;
+          box-shadow: 2px 2px 3px 0 #f1f1f1;
+}
+
+section.offer-section div.row div.product-item a.product-link {
+  text-align: center;
+  margin: 2rem 0;
+  color: #ea8b77;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 95%;
+  outline: none;
+}
+
+section.offer-section div.row div.product-item a.product-link:active {
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */
