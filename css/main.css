@@ -47,7 +47,15 @@ h4 {
   font-weight: bold !important;
   color: #1c7256;
   padding: 0 2rem 1rem;
+  margin-bottom: 2.1rem !important;
+  line-height: 1.4em;
   text-align: center;
+  background: url(../img/title-lines.png) no-repeat center bottom;
+  background-size: 75%;
+}
+
+.display-none {
+  display: none;
 }
 
 main div.container-fluid {
@@ -56,27 +64,19 @@ main div.container-fluid {
   background-image: url("./../img/spring-flowers-plant-sale2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 main div.container-fluid header.container-fluid {
-  z-index: 10;
+  z-index: 100;
   background-color: rgba(53, 53, 53, 0.1);
 }
 
 main div.container-fluid header.container-fluid nav.navbar {
   background-color: rgba(255, 255, 255, 0.68);
-  -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-bottom: 0;
@@ -84,8 +84,6 @@ main div.container-fluid header.container-fluid nav.navbar {
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -100,21 +98,12 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.hamburger-menu span.menu.navbar-toggler-icon {
   width: 1.8em;
   height: 1.8em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 5px;
   border-radius: 4px;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
   transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.hamburger-menu span.menu.navbar-toggler-icon div.menu-line {
@@ -122,10 +111,8 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.
   height: 4px;
   background-color: rgba(28, 114, 86, 0.7);
   border-radius: 2px;
-  -webkit-transition: all .3s .3s;
   transition: all .3s .3s;
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  transform-origin: left;
 }
 
 @media (max-width: 575px) {
@@ -137,7 +124,6 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.hamburger-menu .change .menu-line-1 {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 100%;
   height: 4px;
@@ -148,7 +134,6 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.hamburger-menu .change .menu-line-3 {
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   width: 100%;
   height: 4px;
@@ -187,8 +172,7 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right a.na
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.dropdown-menu {
   margin-top: 1.1rem;
   width: 12rem;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
   position: absolute;
   right: 1px;
   top: 2.68rem;
@@ -231,12 +215,8 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.
 
 @media (max-width: 991px) {
   main div.container-fluid header.container-fluid nav.navbar div.navbar-right div.navbar-collapse.collapse.show {
-    -webkit-transform: translate(10%, 0);
-            transform: translate(10%, 0);
-    -webkit-transition: -webkit-transform .5s linear;
-    transition: -webkit-transform .5s linear;
+    transform: translate(10%, 0);
     transition: transform .5s linear;
-    transition: transform .5s linear, -webkit-transform .5s linear;
   }
 }
 
@@ -253,8 +233,7 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.n
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item a.nav-link:hover {
   text-shadow: 0 0.09rem rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item a.nav-link:focus {
@@ -265,12 +244,10 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.n
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item a.nav-link i.fa-angle-down {
   font-weight: bold;
   padding-right: 3px;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item a.nav-link .fa {
-  -webkit-transition: .3s transform ease-in-out;
   transition: .3s transform ease-in-out;
 }
 
@@ -278,11 +255,9 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.n
   main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item a.nav-link i.fa-angle-down {
     font-weight: bold;
     padding-right: 3px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item a.nav-link .fa {
-    -webkit-transition: .3s transform ease-in-out;
     transition: .3s transform ease-in-out;
   }
 }
@@ -293,33 +268,15 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.n
   position: relative;
   left: 5px;
   display: inline-block;
-  -webkit-animation-name: MoveUpDown;
-          animation-name: MoveUpDown;
-  -webkit-animation: MoveUpDown 1s linear infinite;
-          animation: MoveUpDown 1s linear infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-
-@-webkit-keyframes MoveUpDown {
-  from {
-    bottom: 0px;
-  }
-  to {
-    bottom: 3px;
-  }
+  animation-name: MoveUpDown;
+  animation: MoveUpDown 1s linear infinite;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
 }
 
 @keyframes MoveUpDown {
@@ -332,12 +289,10 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.n
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item.dropdown.show a.nav-link i.fa-angle-down {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item.dropdown.show a.nav-link .fa {
-  -webkit-transition: .3s transform ease-in-out;
   transition: .3s transform ease-in-out;
 }
 
@@ -345,22 +300,16 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.n
   main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item.dropdown.show a.nav-link i.fa-angle-down {
     font-weight: bold;
     padding-right: 3px;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
   main div.container-fluid header.container-fluid nav.navbar div.navbar-right li.nav-item.dropdown.show a.nav-link .fa {
-    -webkit-transition: .3s transform ease-in-out;
     transition: .3s transform ease-in-out;
   }
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav li.nav-item a.nav-link {
@@ -368,21 +317,14 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
   color: #1c7256;
   font-weight: bold;
   padding: 0 .8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav li.nav-item a.nav-link:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
   text-shadow: 0 0.09rem rgba(0, 0, 0, 0.3);
 }
 
@@ -396,29 +338,17 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
 
 main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav li.nav-item i.material-icons {
   font-size: 23px;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
   padding: 0;
-}
-
-main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav li.nav-item .display-none {
-  display: none;
 }
 
 @media (max-width: 767px) {
   main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.navbar-nav {
     font-size: 90%;
     width: 55vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
   main div.container-fluid header.container-fluid nav.navbar div.navbar-left a.nav-link {
     margin-left: 5px;
@@ -449,12 +379,8 @@ main div.container-fluid header.container-fluid nav.navbar div.navbar-left ul.na
 }
 
 main div.container-fluid header.container-fluid .form-register {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 main div.container-fluid header.container-fluid .form-register form.needs-validation .form-group {
@@ -475,36 +401,20 @@ main div.container-fluid header.container-fluid .form-register .modal-body .was-
 }
 
 main div.container-fluid div.side-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
   margin-top: 5px;
   height: 400px;
 }
 
 main div.container-fluid div.side-title div.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: end;
-      align-self: end;
+  flex-direction: column;
+  align-items: center;
+  align-self: end;
 }
 
 main div.container-fluid div.side-title div.row p.h3 {
@@ -516,54 +426,44 @@ main div.container-fluid div.side-title div.row p.h3 {
 }
 
 main div.container-fluid div.side-title div.row a.button {
-  background-color: #fe6666;
+  background-color: #dc3545;
   text-decoration: none;
   border-radius: 7px;
-  border: none;
   color: #f1f1f1;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fe6666;
+  border: none;
   padding: .8rem .9rem;
   margin-top: 1rem;
-  outline: 0;
   font-size: 90%;
   font-weight: bold;
-  cursor: pointer;
 }
 
 main div.container-fluid div.side-title div.row a.button:hover {
-  -webkit-box-shadow: 0 1px 3px 3px rgba(241, 241, 241, 0.5);
-          box-shadow: 0 1px 3px 3px rgba(241, 241, 241, 0.5);
+  box-shadow: 0 1px 3px 3px rgba(241, 241, 241, 0.5);
 }
 
 section.circle-elements div.row div.circle-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 section.circle-elements div.row div.circle-item:hover {
-  -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
   cursor: pointer;
 }
 
 section.circle-elements div.row div.circle-item img.rounded-circle {
   width: 85%;
-  -webkit-box-shadow: 0 0 3px 3px #faf6fb;
-          box-shadow: 0 0 3px 3px #faf6fb;
+  box-shadow: 0 0 3px 3px #faf6fb;
 }
 
 section.circle-elements div.row div.circle-item img.rounded-circle:hover {
-  -webkit-box-shadow: 0 0 9px 3px rgba(149, 144, 148, 0.5);
-          box-shadow: 0 0 9px 3px rgba(149, 144, 148, 0.5);
+  box-shadow: 0 0 9px 3px rgba(149, 144, 148, 0.5);
 }
 
 @media (max-width: 991px) {
@@ -581,7 +481,7 @@ section.circle-elements div.row div.circle-item img.rounded-circle:hover {
 section.circle-elements div.row div.circle-item p {
   margin-top: .5rem;
   font-weight: bold;
-  color: #ea8b77;
+  color: #fe6666;
 }
 
 section.offer-section {
@@ -589,54 +489,158 @@ section.offer-section {
   width: 100%;
   height: 100vh;
   padding: 3rem 0;
+  padding: 2rem 0;
+  height: auto;
 }
 
 section.offer-section div.row {
-  margin: auto 0;
+  margin: 0 0 2rem;
 }
 
 section.offer-section div.row div.product-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
   height: auto;
   cursor: pointer;
-}
-
-section.offer-section div.row div.product-item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all .7s ease;
-  transition: all .7s ease;
+  align-items: center;
+  border: 0;
+  background: transparent;
 }
 
 section.offer-section div.row div.product-item img {
-  width: 95%;
+  width: 90%;
   height: auto;
-  border-radius: 14px;
+  border-radius: 16px;
 }
 
 section.offer-section div.row div.product-item img:hover {
-  -webkit-box-shadow: 2px 2px 3px 0 #f1f1f1;
-          box-shadow: 2px 2px 3px 0 #f1f1f1;
+  transform: scale(1.05);
+  transition: all .7s ease;
+  box-shadow: 2px 2px 3px 0 #f1f1f1;
 }
 
 section.offer-section div.row div.product-item a.product-link {
   text-align: center;
-  margin: 2rem 0;
-  color: #ea8b77;
+  margin: 1.5rem 0 .8rem;
+  color: #fe6666;
   font-weight: 600;
   text-decoration: none;
-  font-size: 95%;
   outline: none;
+  font-size: 90%;
 }
 
 section.offer-section div.row div.product-item a.product-link:active {
   outline: none;
+}
+
+section.offer-section div.row div.product-item div.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.offer-section div.row div.product-item div.pricing small {
+  color: #fe6666;
+}
+
+section.offer-section div.row div.product-item div.pricing small del {
+  text-decoration-color: #959094;
+}
+
+section.offer-section div.row div.product-item div.pricing span {
+  color: #fe6666;
+  font-weight: bold;
+}
+
+section.offer-section div.row div.product-item div.pricing a.button {
+  background-color: #dc3545;
+  text-decoration: none;
+  border-radius: 7px;
+  color: #f1f1f1;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: .5rem .7rem;
+  margin-top: 1rem;
+  font-size: 90%;
+}
+
+section.offer-section div.row div.product-item div.pricing a.button:hover {
+  box-shadow: 0 1px 3px 3px rgba(254, 102, 102, 0.5);
+}
+
+section.offer-section div.row div.product-item:nth-child(2n) a.product-link {
+  color: #1c7256;
+}
+
+section.offer-section div.row div.product-item:nth-child(2n) div.pricing small {
+  color: #1c7256;
+}
+
+section.offer-section div.row div.product-item:nth-child(2n) div.pricing span {
+  color: #1c7256;
+}
+
+@media (max-width: 991px) {
+  section.offer-section div.row div.product-item a.product-link {
+    font-size: 85%;
+  }
+  section.offer-section div.row div.product-item div.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.offer-section div.row div.product-item div.pricing a.button {
+    background-color: #dc3545;
+    text-decoration: none;
+    border-radius: 7px;
+    color: #f1f1f1;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: .5rem .7rem;
+    margin-top: 1rem;
+    font-size: 85%;
+  }
+}
+
+section.box-flowers-images {
+  width: 100%;
+  height: 450vh;
+  background: #fff;
+  display: flex;
+}
+
+section.box-flowers-images div.all-content {
+  display: flex;
+}
+
+section.box-flowers-images div.all-content div.content-box {
+  display: flex;
+  flex-direction: column;
+}
+
+section.box-flowers-images div.all-content div.content-box img {
+  width: 100%;
+}
+
+section.box-flowers-images div.all-content div.content-box span.text-box {
+  font-weight: 600;
+  color: #fff;
+}
+
+section.box-flowers-images div.all-content div.content-box a.button {
+  background-color: #dc3545;
+  text-decoration: none;
+  border-radius: 7px;
+  color: #f1f1f1;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+section.box-flowers-images div.all-content div.content-box a.button:hover {
+  box-shadow: 0 1px 3px 3px rgba(241, 241, 241, 0.5);
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,7 @@
 $color-green :rgb(28, 114, 86);
 $color-green2:#94d3ac;
 $color-green3:#0c9463;
+$color-green4:#4baea0;
 $color-pink :rgb(234, 139, 119);
 $color-pink2:#fe6666;
 $color-pink3:rgb(220, 53, 69);
@@ -31,8 +32,24 @@ body {
 } 
 h4{
     font-weight: bold !important;
-    color: $color-green;
+    color:$color-green;
     padding:0 2rem 1rem;
+    margin-bottom: 2.1rem !important;
+    line-height: 1.4em;
     text-align: center;
+    background: url(../img/title-lines.png) no-repeat center bottom;
+    background-size: 75%;
+    
+}
+
+@mixin button() {
+ 
+        background-color: $color-pink3;
+        text-decoration: none;
+        border-radius: 7px;
+        color: $color-light;
+        outline: 0;
+        text-align: center;
+        cursor: pointer;
     
 }

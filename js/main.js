@@ -23,8 +23,8 @@ $(document).ready(function () {
  
   let navbar = document.querySelector('nav.navbar');
   let navItem = navbar.querySelector('.nav-item');
-  let navBarTogglerIcon = navbar.querySelector('.navbar-toggler-icon');
-  let navLinkLogin = navbar.querySelector('.nav-link-login')
+  let navBarTogglerIcon = navbar.querySelector('.menu.navbar-toggler-icon');
+  let navLinkLogin = navbar.querySelector('a.nav-link-login')
   let materialIcons = navbar.querySelector('.material-icons')
 
 
@@ -38,12 +38,16 @@ $(document).ready(function () {
     navBarTogglerIcon.classList.toggle("change");
     if(!navbarCollapse.classList.contains('show')){
       navbar.style.backgroundColor='#fff';
+      navLinkLogin.style.display= 'none';
+      materialIcons.style.display= 'none'
     }else{
       navbar.style.backgroundColor='rgba(255, 255, 255, 0.68)';
+      navLinkLogin.style.display= 'flex';
+      materialIcons.style.display= 'flex'
     }
 
-    navLinkLogin.classList.toggle("display-none")
-    materialIcons.classList.toggle("display-none")
+    // navLinkLogin.classList.toggle("display-none");
+    // materialIcons.classList.toggle("display-none")
 
   })
 

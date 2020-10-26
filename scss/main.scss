@@ -1,6 +1,9 @@
 @import "fonts";
 @import "base";
 
+.display-none {
+    display: none;
+}
 
 main {
 
@@ -10,10 +13,10 @@ main {
         background-image: url('./../img/spring-flowers-plant-sale2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        // background-attachment: fixed;
 
         header.container-fluid {
-            z-index: 10;
+            z-index: 100;
             // max-width: 1248px;
             background-color: rgba(53, 53, 53, 0.1);
             // background-image: url('./../img/spring-flowers-plant-sale2.jpg');
@@ -327,10 +330,6 @@ main {
                                 transform: rotate(270deg);
                                 padding: 0;
                             }
-
-                            .display-none {
-                                display: none;
-                            }
                         }
 
                     }
@@ -464,17 +463,13 @@ main {
 
 
                 a.button {
+                    @include button();
                     background-color: $color-pink2;
-                    text-decoration: none;
-                    border-radius: 7px;
                     border: none;
-                    color: $color-light;
                     padding: .8rem .9rem;
                     margin-top: 1rem;
-                    outline: 0;
                     font-size: 90%;
                     font-weight: bold;
-                    cursor: pointer;
 
                     &:hover {
                         box-shadow: 0 1px 3px 3px rgba($color: $color-light, $alpha: .5);
@@ -488,7 +483,6 @@ main {
 }
 
 section.circle-elements {
-
 
     div.row {
         div.circle-item {
@@ -526,7 +520,7 @@ section.circle-elements {
             p {
                 margin-top: .5rem;
                 font-weight: bold;
-                color: $color-pink;
+                color: $color-pink2;
 
             }
         }
@@ -535,50 +529,170 @@ section.circle-elements {
 
 section.offer-section {
     @include products();
+    padding: 2rem 0;
+    height: auto;
+    // background-color: rgb(240, 230, 97);
+
+
     div.row {
-        margin: auto 0;
-        
+        margin: 0 0 2rem;
+
         div.product-item {
             display: flex;
             flex-direction: column;
             width: 100%;
             height: auto;
             cursor: pointer;
-
-            &:hover {
-                transform: scale(1.05);
-                transition: all .7s ease;
-            }
+            align-items: center;
+            border: 0;
+            background: transparent;
+            // height: 200px;
 
             img {
-                width: 95%;
+                width: 90%;
                 height: auto;
-                border-radius: 14px;
+                border-radius: 16px;
 
                 &:hover {
+                    transform: scale(1.05);
+                    transition: all .7s ease;
                     box-shadow: 2px 2px 3px 0 $color-light;
                 }
             }
-        
+
             a.product-link {
                 text-align: center;
-                margin: 2rem 0;
-                color: $color-pink;
+                margin: 1.5rem 0 .8rem;
+                color: $color-pink2;
                 font-weight: 600;
                 text-decoration: none;
-                font-size: 95%;
-                // text-shadow: 0 1px rgba($color: $color-text, $alpha: .7);
                 outline: none;
+                font-size: 90%;
 
                 &:active {
                     outline: none;
                 }
 
+                &:hover {
+                    // text-shadow: 0 1px rgba($color: $color-text, $alpha: .7);
+                }
             }
-        
-         
-        
 
+            div.pricing {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                small {
+                    color: $color-pink2;
+
+                    del {
+                        text-decoration-color: $color-text;
+                    }
+                }
+
+                span {
+                    color: $color-pink2;
+                    font-weight: bold;
+                }
+
+                a.button {
+                    @include button();
+                    // width: 45%;
+                    padding: .5rem .7rem;
+                    margin-top: 1rem;
+                    font-size: 90%;
+
+                    &:hover {
+                        box-shadow: 0 1px 3px 3px rgba($color: $color-pink2, $alpha: .5);
+                    }
+
+                }
+            }
+        }
+
+        div.product-item:nth-child(2n) {
+            a.product-link {
+                color: $color-green;
+            }
+
+            div.pricing {
+                small {
+                    color: $color-green;
+                }
+
+                span {
+                    color: $color-green;
+                }
+            }
+
+        }
+    }
+}
+
+@media(max-width:991px) {
+    section.offer-section {
+        div.row {
+            div.product-item {
+                a.product-link {
+                    font-size: 85%;
+                }
+
+                div.pricing {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    small {
+                        del {}
+                    }
+
+                    span {}
+
+                    a.button {
+                        @include button();
+                        // width: 45%;
+                        padding: .5rem .7rem;
+                        margin-top: 1rem;
+                        font-size: 85%;
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.box-flowers-images {
+    width: 100%;
+    height: 450vh;
+    background: #fff;
+    display: flex;
+
+    div.all-content {
+        display: flex;
+
+        div.content-box {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+
+            span.text-box {
+                font-weight: 600;
+                color: #fff;
+            }
+
+            a.button {
+                @include button();
+
+                &:hover {
+                    box-shadow: 0 1px 3px 3px rgba($color: $color-light, $alpha: .5);
+                }
+            }
         }
     }
 }
