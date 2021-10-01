@@ -1,4 +1,3 @@
-@import "fonts";
 @import "base";
 
 .display-none {
@@ -10,7 +9,7 @@ main {
     div.container-fluid {
         width: 100%;
         height: 500px;
-        background-image: url('./../img/spring-flowers-plant-sale2.jpg');
+        background-image: url('./../../img/spring-flowers-plant-sale2.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         // background-attachment: fixed;
@@ -533,6 +532,17 @@ section.offer-section {
     height: auto;
     // background-color: rgb(240, 230, 97);
 
+    div.offer-section-title {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            padding-bottom: 0;
+        }
+    }
 
     div.row {
         margin: 0 0 2rem;
@@ -666,28 +676,41 @@ section.offer-section {
 
 section.box-flowers-images {
     width: 100%;
-    height: 450vh;
     background: #fff;
     display: flex;
 
     div.all-content {
         display: flex;
+        margin: 0;
+        margin-bottom: 2rem;
 
         div.content-box {
             display: flex;
             flex-direction: column;
+            position: relative;
+            padding: 0;
 
-            img {
+            img.content-box-image {
                 width: 100%;
             }
 
             span.text-box {
                 font-weight: 600;
                 color: #fff;
+                z-index: 100;
+                text-shadow: 1px 1px rgba($color: #000, $alpha: .75);
+                position: absolute;
+                top: 45%;
+                right: 20%;
             }
 
             a.button {
                 @include button();
+                padding: .35rem .375rem;
+                position: absolute;
+                top: 60%;
+                right: 20%;
+                font-size: 14px;
 
                 &:hover {
                     box-shadow: 0 1px 3px 3px rgba($color: $color-light, $alpha: .5);
@@ -696,3 +719,39 @@ section.box-flowers-images {
         }
     }
 }
+
+// @media(max-width:991px) {
+
+//     section.box-flowers-images {
+//         width: 100%;
+//         display: flex;
+
+//         div.all-content {
+//             display: flex;
+//             margin: 0;
+//             margin-bottom: 2rem;
+
+//             div.content-box {
+//                 display: flex;
+//                 flex-direction: column;
+//                 position: relative;
+
+//                 img.content-box-image {}
+
+//                 span.text-box {
+//                     top: 45%;
+//                     right: 20%;
+//                 }
+
+//                 a.button {
+//                     @include button();
+//                     padding: .35rem .375rem;
+//                     position: absolute;
+//                     top: 60%;
+//                     right: 20%;
+//                     font-size: 14px;
+//                 }
+//             }
+//         }
+//     }
+// }
